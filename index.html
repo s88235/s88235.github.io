@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test</title>
+        <title>MultiTakt</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-        <p>Hello world.</p>
+
+        <!--Überschrift-->
+        <header>
+            <h1> MultiTakt </h1>
+            <div class="logo">Logo</div> <!--img einfügen-->
+        </header>
+
+        <!--beats per minute-->
+        <div class="bpm">
+            <div class="label-bpm">BPM</div>
+            <div class="number-bpm">161</div>
+            <div class="bezeichnung-bim-italienisch">Grave</div>
+            <input class="slider-bpm" type="range"
+            min="1" max="300" value="1">
+        </div>
+
+        <!--Schläge pro Takt-->
+        <div class="schläge">
+            <div class="schläge-label">Schläge</div>
+            <div class="schläge-punkte">...</div>
+        </div>
+        
+        <!--play button-->
+        <div class="play-button">
+            <button class="playpause"></button>
+        </div>
+
+        <!--Hervorhebung erster beat-->
+        <div class="erster-beat">Hervorhebung erster Beat</div>
+
     </body>
 </html>
