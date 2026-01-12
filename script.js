@@ -1,4 +1,4 @@
-import {addCommands, start} from '/annyang.js';
+import {addCommands, start} from './annyang.js';
 
 //check if annyang could be loaded
 if(annyang) {
@@ -20,5 +20,6 @@ addCommands(commands);
 
 //start listening
 start();
+
 
 
