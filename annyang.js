@@ -726,4 +726,4 @@
 
 
  //Funktionen exportieren um sie in script.js zu nutzen 
- export {annyang.start, annyang.addCommands};
+ export {start, addCommands};
