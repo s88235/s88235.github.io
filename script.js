@@ -15,8 +15,9 @@ function greeting() {
 }
 
 //add commands
-annynag.addCommands(commands);
+annyang.addCommands(commands);
 
 //start listening
 annyang.start();
+
 
