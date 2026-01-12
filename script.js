@@ -16,10 +16,11 @@ function greeting() {
 }
 
 //add commands
-addCommands(commands);
+annyang.addCommands(commands);
 
 //start listening
-start();
+annyang.start();
+
 
 
 
