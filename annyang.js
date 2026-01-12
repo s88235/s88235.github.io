@@ -724,5 +724,6 @@
  *
  */
 
+
  //Funktionen exportieren um sie in script.js nutzen zu können
- export {start, addCommand};
+ export {start, addCommands};
