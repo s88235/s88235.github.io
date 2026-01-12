@@ -723,7 +723,3 @@
  ````
  *
  */
-
-
- //Funktionen exportieren um sie in script.js zu nutzen 
- //export {start, addCommands};
