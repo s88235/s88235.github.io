@@ -1,3 +1,4 @@
+import {addCommands, start} from 'annyang.js';
 
 //check if annyang could be loaded
 if(annyang) {
@@ -11,13 +12,12 @@ var commands = {
 
 //functions
 function greeting() {
-    console.log("Hello:3")
+    console.log("Hello:3");
 }
 
 //add commands
-annyang.addCommands(commands);
+addCommands(commands);
 
 //start listening
-annyang.start();
-
+start();
 
