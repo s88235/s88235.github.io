@@ -7,22 +7,29 @@
 }
 
 header {
-    background: black;
-    color: white;
+    background: #F7F4E9;
+    color: #E40C2B;
     text-align: center;
     font-family: Asap, sans-serif;
+    font-size: 30px;
     padding: 20px;
 }
 
 body {
-    background: #24272E;
+    background: #1D1D2C;
     color: white;
     text-align: center;
     font-family: Asap, sans-serif;
+    font-size: 18px;
 }
 
 .bpm {
     margin: 20px;
+}
+
+.label-bpm {
+    padding-bottom: 10px;
+    font-size: 30px;
 }
 
 .slider-bpm:hover {
@@ -31,7 +38,7 @@ body {
 
 .playpause {
     cursor: pointer;
-    background-color: orangered;
+    background-color: #438945;
     width: 60px;
     height: 60px;
     border-radius: 50%;

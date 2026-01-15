@@ -6,9 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
 
-        <!--scripte-->
+        <!--script importieren-->
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-        <script src="script.js"></script>
     </head>
     <body>
         
@@ -20,30 +19,27 @@
 
         <!--beats per minute-->
         <div class="bpm">
-            <div class="label-bpm">BPM</div>
-            <div class="number-bpm">161</div>
-            <div class="bezeichnung-bim-italienisch">Grave</div>
-            <input class="slider-bpm" type="range"
-            min="1" max="300" value="1">
+            <div id="label-bpm" class="label-bpm">BPM</div>
+            <span id="number-bpm">10</span>
+            <div id="bezeichnung-bpm-italienisch" class="bezeichnung-bpm-italienisch">Larghissimo</div>
+            <input type="range" min="1" max="300" value="10" id="slider-bpm" >
         </div>
 
         <!--Schläge pro Takt-->
         <div class="schläge">
-            <div class="schläge-label">Schläge</div>
-            <div class="schläge-punkte">...</div>
+            <div id="schläge-label" class="schläge-label">Schläge</div>
+            <div id="schläge-punkte" class="schläge-punkte">...</div>
         </div>
         
         <!--play button-->
         <div class="play-button">
-            <button class="playpause"></button>
+            <button id="playpause" class="playpause"></button>
         </div>
 
         <!--Hervorhebung erster beat-->
-        <div class="erster-beat">Hervorhebung erster Beat</div>
+        <div id="erster-beat" class="erster-beat">Hervorhebung erster Beat</div>
 
+        <script src="script.js"></script>
     </body>
 
 </html>
-
-
-
