@@ -5,9 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
-
-        <!--script importieren-->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <!--scripte importieren-->
+        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>-->
     </head>
     <body>
         
@@ -32,12 +31,13 @@
         </div>
         
         <!--play button-->
-        <div class="play-button">
-            <button id="playpause" class="playpause"></button>
+        <div class="playpause-button">
+            <img src="play.png" id="play-img"> 
+            <img src="pause.png" id="pause-img">
         </div>
 
         <!--Hervorhebung erster beat-->
-        <div id="erster-beat" class="erster-beat">Hervorhebung erster Beat</div>
+        <input type="checkbox" id="erster-beat"> Hervorhebung erster Beat
 
         <script src="script.js"></script>
     </body>
