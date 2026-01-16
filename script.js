@@ -97,7 +97,7 @@ spracheingabe_input.addEventListener('change', function() {
     }
     else {
         //annyang.start();
-        islistening = 1;
+        isListening = 1;
         console.log(isListening);
     }
 })
@@ -123,3 +123,4 @@ slider_bpm_input.oninput = function () {
 
 
 function main () {}
+
