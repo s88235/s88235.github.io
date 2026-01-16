@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
         <!--scripte importieren-->
-        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     </head>
     <body>
         
@@ -23,22 +23,22 @@
             <div id="bezeichnung-bpm-italienisch" class="bezeichnung-bpm-italienisch">Larghissimo</div>
             <input type="range" min="1" max="300" value="10" id="slider-bpm" >
         </div>
-
-        <!--Schläge pro Takt-->
-        <div class="schläge">
-            <div id="schläge-label" class="schläge-label">Schläge</div>
-            <div id="schläge-punkte" class="schläge-punkte">...</div>
-        </div>
         
         <!--play button-->
         <div class="playpause-button">
-            <img src="play.png" id="play-img"> 
-            <img src="pause.png" id="pause-img">
+            <img src="images/play.png" id="play-img"> 
+            <img src="images/pause.png" id="pause-img">
         </div>
 
-        <!--Hervorhebung erster beat-->
-        <input type="checkbox" id="erster-beat"> Hervorhebung erster Beat
+        <!--Einstellungen-->
+        <div class="Einstellungen">
+            <input type="checkbox" id="erster-beat" unchecked>
+            <label for="erster-beat" id="erster-beat-label">Hervorhebung erster Beat</label><br>
 
+            <input type="checkbox" id="spracheingabe" checked>
+            <label for="spracheingabe" id="spracheingabe-label">Spracheingabe</label>
+        </div>
+        
         <script src="script.js"></script>
     </body>
 

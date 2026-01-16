@@ -82,8 +82,8 @@ body {
     position: absolute;
     background: #438945;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     padding: 2px;
     transition: background .7s ease-in-out;
 }
@@ -91,8 +91,48 @@ body {
 #pause-img {
     background: #438945;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     padding: 2px;
     transition: background .7s ease-in-out;
 }
+
+.Einstellungen {
+    transition: opacity .15s ease-in-out;
+    width: 240px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+}
+#erster-beat {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+#erster-beat-label {
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+}
+#spracheingabe {
+    
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+#spracheingabe-label {
+    margin-top: 15px;
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #438945;
+}
+
+
+

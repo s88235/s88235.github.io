@@ -1,20 +1,21 @@
-var isplaying = 0;
+var isPlaying = 0;
+var isListening = 1;
+var firstBeatNormal = 0;
 const label_bpm_div = document.getElementById("label-bpm");
 let number_bpm_span = document.getElementById("number-bpm");
 const bezeichnung_bpm_italienisch_div = document.getElementById("bezeichnung-bpm-italienisch");
 let slider_bpm_input = document.getElementById("slider-bpm");
-const schläge_label_div = document.getElementById("schläge-label");
-const schläge_punkte_div = document.getElementById("schläge-punkte");
 const playpause_button_div = document.getElementById("playpause-button");
 const play_button_img = document.getElementById("play-img");
 const pause_button_img = document.getElementById("pause-img");
-const erster_beat_div = document.getElementById("erster-beat");
+const erster_beat_input = document.getElementById("erster-beat");
+const spracheingabe_input = document.getElementById("spracheingabe");
 
 
 //check if annyang could be loaded
-/*if(annyang) {
+if(annyang) {
     console.log("annyang works")
-}*/
+}
 
 //command Liste
 var commands = {
@@ -32,13 +33,13 @@ var commands = {
 
 //functions
 function start_playing() {
-    isplaying = 1;
+    isPlaying = 1;
     changeVisibility();
     console.log("start");
 }
 
 function stop_playing() {
-    isplaying = 0;
+    isPlaying = 0;
     changeVisibility();
     console.log("stop");
 }
@@ -60,7 +61,7 @@ function get_italian() {
 }
 
 function changeVisibility() {
-    if (isplaying == 1) {
+    if (isPlaying == 1) {
         pause_button_img.style.visibility = 'visible';
         play_button_img.style.visibility = 'hidden';
     }
@@ -71,6 +72,14 @@ function changeVisibility() {
 }
 changeVisibility();
 
+//add commands
+annyang.addCommands(commands);
+
+//start listening
+annyang.start();
+
+//EventListener
+
 //start/stop playing when button is pressed
 pause_button_img.addEventListener('click', function() {
     stop_playing();
@@ -79,12 +88,31 @@ play_button_img.addEventListener('click', function() {
     start_playing();
 })
 
-//add commands
-/*annyang.addCommands(commands);
+//soll spracheingabe verwendet werden? -> annyang.start/stop
+spracheingabe_input.addEventListener('change', function() {
+    if (isListening == 1) {
+        //annyang.stop();
+        isListening = 0;
+        console.log(isListening);
+    }
+    else {
+        //annyang.start();
+        islistening = 1;
+        console.log(isListening);
+    }
+})
 
-//start listening
-annyang.start();
-*/
+//soll der erste beat hervorgehoben werden?
+erster_beat_input.addEventListener('change', function () {
+    if (firstBeatNormal == 0) {
+        firstBeatNormal = 1;
+        console.log(firstBeatNormal);
+    }
+    else {
+        firstBeatNormal = 0;
+        console.log(firstBeatNormal);
+    }
+})
 
 //number-bpm an slider anpassen
 number_bpm_span.innerHTML = slider_bpm_input.value;
