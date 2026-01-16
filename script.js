@@ -91,7 +91,7 @@ play_button_img.addEventListener('click', function() {
 //soll spracheingabe verwendet werden? -> annyang.start/stop
 spracheingabe_input.addEventListener('change', function() {
     if (isListening == 1) {
-        //annyang.stop();
+        //annyang.pause();
         isListening = 0;
         console.log(isListening);
     }
@@ -120,5 +120,6 @@ slider_bpm_input.oninput = function () {
     number_bpm_span.innerHTML = this.value;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
+
 
 function main () {}
