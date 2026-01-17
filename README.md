@@ -1,4 +1,4 @@
-MultiTakt - A multimodal Metronome app
+<h1>MultiTakt - A multimodal Metronome app</h1>
 
 https://s88235.github.io/
 
