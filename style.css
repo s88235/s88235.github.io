@@ -28,10 +28,12 @@ footer {
     text-align: center;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
+    bottom: 0%;
 }
 
 #logo-img {
     height: 90px;
+    max-width: 90%;
 } 
 
 .bpm {
@@ -207,6 +209,7 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
+
 
 
 
