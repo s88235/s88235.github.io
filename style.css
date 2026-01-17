@@ -28,6 +28,7 @@ footer {
     text-align: center;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
+    position: sticky;
     bottom: 0%;
 }
 
@@ -209,6 +210,7 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
+
 
 
 
