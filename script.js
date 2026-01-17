@@ -21,7 +21,7 @@ const popup_sprachbefehle_div = document.getElementById("popup-sprachbefehle");
 //check if annyang could be loaded
 if(annyang) {
     console.log("annyang works")
-}
+} 
 
 //command Liste
 var commands = {
@@ -49,37 +49,37 @@ function stop_playing() {
 function get_italian() {
     var italian;
     if (slider_bpm_input.value <= 24) {
-        italian = 'Larghissimo'
+        italian = 'Larghissimo';
     }
-    else if (slider_bpm_input.value >= 25 && slider_bpm_input.value < 40) {
-        italian = 'Grave'
+    else if (slider_bpm_input.value >= 25 && slider_bpm_input.value <= 40) {
+        italian = 'Grave';
     }
     else if (slider_bpm_input.value >= 40 && slider_bpm_input.value < 60) {
-        italian = 'Lento/Largo'
+        italian = 'Lento/Largo';
     }
     else if (slider_bpm_input.value >= 60 && slider_bpm_input.value < 66) {
-        italian = 'Larghetto'
+        italian = 'Larghetto';
     }
     else if (slider_bpm_input.value >= 66 && slider_bpm_input.value < 76) {
-        italian = 'Adagio'
+        italian = 'Adagio';
     }
     else if (slider_bpm_input.value >= 76 && slider_bpm_input.value < 108) {
-        italian = 'Andante'
+        italian = 'Andante';
     }
     else if (slider_bpm_input.value >= 108 && slider_bpm_input.value < 120) {
-        italian = 'Moderato'
+        italian = 'Moderato';
     }
     else if (slider_bpm_input.value >= 120 && slider_bpm_input.value < 140) {
-        italian = 'Allegro'
+        italian = 'Allegro';
     }
     else if (slider_bpm_input.value >= 140 && slider_bpm_input.value < 168) {
-        italian = 'Vivace'
+        italian = 'Vivace';
     }
     else if (slider_bpm_input.value >= 168 && slider_bpm_input.value < 199) {
-        italian = 'Presto'
+        italian = 'Presto';
     }
     else if (slider_bpm_input.value >= 200) {
-        italian = 'Prestissimo'
+        italian = 'Prestissimo';
     }
     return italian;
 }
@@ -114,7 +114,7 @@ annyang.setLanguage('de');
 annyang.addCommands(commands);
 
 //start listening
-annyang.start();
+annyang.start(); 
 
 
 //EventListener
@@ -129,7 +129,7 @@ play_button_img.addEventListener('click', function() {
 //soll spracheingabe verwendet werden? -> annyang.start/stop
 spracheingabe_input.addEventListener('change', function() {
     if (isListening == 1) {
-        annyang.pause();
+        annyang.pause(); 
         isListening = 0;
         console.log(isListening);
     }
@@ -168,8 +168,4 @@ slider_bpm_input.oninput = function () {
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
 
-
 function main () {}
-
-
-
