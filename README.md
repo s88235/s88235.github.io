@@ -21,3 +21,5 @@ https://s88235.github.io/
         <td>...</td>
     </tr>
 </table>
+<h2>unterstützte Browser</h2>
+<p>Google Chrome, Ecosia, DuckDuckGo</p>
