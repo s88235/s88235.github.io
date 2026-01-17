@@ -10,6 +10,7 @@ header {
     background: #F7F4E9;
     text-align: center;
     padding: 8px;
+    width: 100%;
 }
 
 body {
@@ -206,4 +207,5 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
+
 
