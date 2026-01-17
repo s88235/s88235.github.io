@@ -31,7 +31,7 @@ footer {
 }
 
 #logo-img {
-    height: 100px;
+    height: 90px;
 } 
 
 .bpm {
@@ -207,5 +207,6 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
+
 
 
