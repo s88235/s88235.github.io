@@ -46,6 +46,8 @@ function stop_playing() {
     console.log("stop");
 }
 
+function get_italian() {
+    var italian;
     if (slider_bpm_input.value <= 24) {
         italian = 'Larghissimo'
     }
@@ -79,6 +81,8 @@ function stop_playing() {
     else if (slider_bpm_input.value >= 200) {
         italian = 'Prestissimo'
     }
+    return italian;
+}
 
 function changeVisibilityPlayPauseButton() {
     if (isPlaying == 1) {
@@ -166,5 +170,6 @@ slider_bpm_input.oninput = function () {
 
 
 function main () {}
+
 
 
