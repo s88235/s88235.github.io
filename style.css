@@ -230,8 +230,8 @@ input[type="checkbox"] {
     /*transition:all 0.5s ease-in-out;*/
 }
 .popup .popup-content h2 {
+    font-size: 30px;
     color:#438945;
-    font-size: 50px;
     margin-bottom: 10px;
 }
 .popup .popup-content button {
@@ -245,5 +245,6 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
+
 
 
