@@ -86,7 +86,7 @@ changeVisibilitySprachbefehlePopup();
 
 
 //Sprache auf deutsch schalten
-annyang.setLanguage(de-DE);
+annyang.setLanguage('de-DE');
 
 //add commands
 annyang.addCommands(commands);
@@ -145,5 +145,6 @@ slider_bpm_input.oninput = function () {
     number_bpm_span.innerHTML = this.value;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
+
 
 function main () {}
