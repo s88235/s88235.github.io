@@ -49,14 +49,36 @@ function get_italian() {
     if (slider_bpm_input.value <= 24) {
         italian = 'Larghissimo'
     }
-    else if (slider_bpm_input.value >= 25 && slider_bpm_input.value <= 40) {
+    else if (slider_bpm_input.value >= 25 && slider_bpm_input.value < 40) {
         italian = 'Grave'
     }
-    else if (slider_bpm_input.value >= 40 && slider_bpm_input.value <= 60) {
-        italian = 'Largo'
+    else if (slider_bpm_input.value >= 40 && slider_bpm_input.value < 60) {
+        italian = 'Lento/Largo'
     }
-    /*else if (slider_bpm_input.value >=  && slider_bpm_input.value <=) {
-        italian = ''                                      <---------------------------------------------bitte noch vervollständigen Amelie i'm confused*/
+    else if (slider_bpm_input.value >= 60 && slider_bpm_input.value < 66) {
+        italian = 'Larghetto'
+    }
+    else if (slider_bpm_input.value >= 66 && slider_bpm_input.value < 76) {
+        italian = 'Adagio'
+    }
+    else if (slider_bpm_input.value >= 76 && slider_bpm_input.value < 108) {
+        italian = 'Andante'
+    }
+    else if (slider_bpm_input.value >= 108 && slider_bpm_input.value < 120) {
+        italian = 'Moderato'
+    }
+    else if (slider_bpm_input.value >= 120 && slider_bpm_input.value < 140) {
+        italian = 'Allegro'
+    }
+    else if (slider_bpm_input.value >= 140 && slider_bpm_input.value < 168) {
+        italian = 'Vivace'
+    }
+    else if (slider_bpm_input.value >= 168 && slider_bpm_input.value < 199) {
+        italian = 'Presto'
+    }
+    else if (slider_bpm_input.value >= 200) {
+        italian = 'Prestissimo'
+    }
     return italian;
 }
 
@@ -123,4 +145,5 @@ slider_bpm_input.oninput = function () {
 
 
 function main () {}
+
 
