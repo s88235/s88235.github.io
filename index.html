@@ -12,13 +12,12 @@
         
         <!--Überschrift-->
         <header>
-            <h1> MultiTakt </h1>
-            <div class="logo">Logo</div> <!--img einfügen-->
+            <img src="images/logo.png" id="logo-img">
         </header>
 
         <!--beats per minute-->
         <div class="bpm">
-            <div id="label-bpm" class="label-bpm">BPM</div>
+            <h2 id="label-bpm" class="label-bpm">BPM</h2>
             <span id="number-bpm">10</span>
             <div id="bezeichnung-bpm-italienisch" class="bezeichnung-bpm-italienisch">Larghissimo</div>
             <input type="range" min="1" max="300" value="10" id="slider-bpm" >
@@ -38,7 +37,24 @@
             <input type="checkbox" id="spracheingabe" checked>
             <label for="spracheingabe" id="spracheingabe-label">Spracheingabe</label>
         </div>
+
+        <!--Fußzeile-->
+        <footer>
+            <label id="öffnen-sprachbefehle">Sprachbefehle</label><br>
+            <label id="öffnen-tempoübersicht">Tempoübersicht</label><br>
+            <a href="https://github.com/s88235/s88235.github.io" target="_blank" id="link-github">GitHub</a>
+        </footer>
         
+        <!--pop ups-->
+        <div class="popup" id="popup-sprachbefehle">
+            <div class="overlay"></div>
+            <div class="popup-content">
+                <button class="close-btn" id="close-btn">X</button>
+                <h2>Sprachbefehle</h2>
+                <img src="images/sprachbefehle-temp.png" id="sprachbefehle.png">
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 
