@@ -20,13 +20,27 @@
             <h2 id="label-bpm" class="label-bpm">BPM</h2>
             <span id="number-bpm">10</span>
             <div id="bezeichnung-bpm-italienisch" class="bezeichnung-bpm-italienisch">Larghissimo</div>
-            <input type="range" min="1" max="300" value="10" id="slider-bpm" >
+            <input type="range" min="1" max="220" value="10" id="slider-bpm" >
         </div>
         
         <!--play button-->
         <div class="playpause-button">
             <img src="images/play.png" id="play-img"> 
             <img src="images/pause.png" id="pause-img">
+        </div>
+
+        <!--schlagzähler-->
+        <div class="schläger-zähler">
+            <h2 id="label-schläge">Schläge</h2>
+            <div class="schläger-zähler-interface">
+                <button class="minus-schläge-button" id="minus-schläge-button">
+                    <span class="minus"> - </span>
+                </button>
+                <span id="number-schläge">4</span>
+                <button class="plus-schläge-button" id="plus-schläge-button">
+                    <span class="plus"> + </span>
+                </button>
+            </div>
         </div>
 
         <!--Einstellungen-->
@@ -41,7 +55,6 @@
         <!--Fußzeile-->
         <footer>
             <label id="öffnen-sprachbefehle">Sprachbefehle</label><br>
-            <label id="öffnen-tempoübersicht">Tempoübersicht</label><br>
             <a href="https://github.com/s88235/s88235.github.io" target="_blank" id="link-github">GitHub</a>
         </footer>
         

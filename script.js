@@ -2,18 +2,27 @@ var isPlaying = 0;
 var isListening = 1;
 var firstBeatNormal = 0;
 var isVisibleSprachbefehle = 0;
+var schlägeZähler = 4;
+
 const label_bpm_div = document.getElementById("label-bpm");
 let number_bpm_span = document.getElementById("number-bpm");
 const bezeichnung_bpm_italienisch_div = document.getElementById("bezeichnung-bpm-italienisch");
 let slider_bpm_input = document.getElementById("slider-bpm");
+
 const playpause_button_div = document.getElementById("playpause-button");
 const play_button_img = document.getElementById("play-img");
 const pause_button_img = document.getElementById("pause-img");
+
+const minus_schläge_button = document.getElementById("minus-schläge-button");
+const plus_schläge_button = document.getElementById("plus-schläge-button");
+const number_schläge_span = document.getElementById("number-schläge");
+
 const erster_beat_input = document.getElementById("erster-beat");
 const spracheingabe_input = document.getElementById("spracheingabe");
+
 const github_link = document.getElementById("link-github");
 const öffnen_sprachbefehle_label = document.getElementById("öffnen-sprachbefehle");
-const öffnen_tempoübersicht_label = document.getElementById("öffnen-tempoübersicht");
+
 const overlay_div = document.getElementById("overlay");
 const close_btn_button = document.getElementById("close-btn");
 const popup_sprachbefehle_div = document.getElementById("popup-sprachbefehle");
@@ -21,7 +30,7 @@ const popup_sprachbefehle_div = document.getElementById("popup-sprachbefehle");
 //check if annyang could be loaded
 if(annyang) {
     console.log("annyang works")
-} 
+}
 
 //command Liste
 var commands = {
@@ -114,7 +123,7 @@ annyang.setLanguage('de');
 annyang.addCommands(commands);
 
 //start listening
-annyang.start(); 
+annyang.start();  
 
 
 //EventListener
@@ -126,10 +135,30 @@ play_button_img.addEventListener('click', function() {
     start_playing();
 })
 
+//Schläge Zähler
+minus_schläge_button.addEventListener('click', function() {
+    if (schlägeZähler <= 1) {
+        return;
+    }
+    else {
+        schlägeZähler--;
+        number_schläge_span.innerText = schlägeZähler;
+    }
+})
+plus_schläge_button.addEventListener('click', function() {
+    if (schlägeZähler >= 12) {
+        return;
+    }
+    else {
+        schlägeZähler++;
+        number_schläge_span.innerText = schlägeZähler;
+    }
+})
+
 //soll spracheingabe verwendet werden? -> annyang.start/stop
 spracheingabe_input.addEventListener('change', function() {
     if (isListening == 1) {
-        annyang.pause(); 
+        annyang.pause();  
         isListening = 0;
         console.log(isListening);
     }

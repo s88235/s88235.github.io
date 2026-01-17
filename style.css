@@ -39,7 +39,7 @@ footer {
     margin: 20px;
 }
 
-.label-bpm {
+h2 {
     color: #438945;
     padding-bottom: 10px;
     font-size: 40px;
@@ -109,6 +109,45 @@ footer {
     transition: background .7s ease-in-out;
 }
 
+.schläger-zähler-interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#number-schläge {
+    font-size: 2.4rem;
+    margin: 0 15px;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+}
+.minus-schläge-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #F7F4E9;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #F7F4E9;
+} 
+.minus {
+    position: relative;
+    top: -3px;
+}
+.plus-schläge-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #F7F4E9;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #F7F4E9;
+} 
+.plus {
+    position: relative;
+    top: -3px; 
+}
+
 .Einstellungen {
     transition: opacity .15s ease-in-out;
     width: 240px;
@@ -149,17 +188,14 @@ input[type="checkbox"] {
 #öffnen-sprachbefehle {
     position: relative;
     top: 10px;
-}
-#öffnen-tempoübersicht {
-    position: relative;
-    top: 25px;
+    cursor: pointer;
 }
 
 #link-github {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none !important;
     position: relative;
-    top: 40px;
+    top: 25px;
 }
 
 .popup {
@@ -208,9 +244,4 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
-
-
-
-
-
 
