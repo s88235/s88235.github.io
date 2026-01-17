@@ -86,7 +86,7 @@ changeVisibilitySprachbefehlePopup();
 
 
 //Sprache auf deutsch schalten
-annyang.setLanguage('de-DE');
+annyang.setLanguage('de');
 
 //add commands
 annyang.addCommands(commands);
@@ -148,3 +148,4 @@ slider_bpm_input.oninput = function () {
 
 
 function main () {}
+
