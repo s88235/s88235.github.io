@@ -213,11 +213,11 @@ spracheingabe_input.addEventListener('change', function() {
 erster_beat_input.addEventListener('change', function () {
     if (firstBeat == 0) {
         firstBeat = 1;
-        console.log(firstBeatNormal);
+        console.log(firstBeat);
     }
     else {
         firstBeat = 0;
-        console.log(firstBeatNormal);
+        console.log(firstBeat);
     }
 })
 //popup fenster
@@ -238,4 +238,5 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
