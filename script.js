@@ -51,8 +51,8 @@ var commands = {
 
 //functions
 //Timer funktion (funktion, interval, startet mit Funktion statt warten)
-soundHigh.volume = 1;
-soundLow.volume = 1;
+soundHigh.volume = 0.5;
+soundLow.volume = 0.5;
 const timer = new Timer(play_Sound, 60000/bpm, {immediate: true})
 
 function play_Sound () {
@@ -240,6 +240,7 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
 
 
