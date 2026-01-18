@@ -31,8 +31,8 @@ const overlay_div = document.getElementById("overlay");
 const close_btn_button = document.getElementById("close-btn");
 const popup_sprachbefehle_div = document.getElementById("popup-sprachbefehle");
 
-const soundHigh = new Audio ('sounds/MetronomeSoundHigh.mp3');
-const soundLow = new Audio ('sounds/MetronomeSoundLow.mp3');
+const soundHigh = new Audio ('sounds/MetronomeSoundHighLouder.mp3');
+const soundLow = new Audio ('sounds/MetronomeSoundLowLouder.mp3');
 
 //check if annyang could be loaded
 if(annyang) {
@@ -51,6 +51,8 @@ var commands = {
 
 //functions
 //Timer funktion (funktion, interval, startet mit Funktion statt warten)
+soundHigh.volume = 1;
+soundLow.volume = 1;
 const timer = new Timer(play_Sound, 60000/bpm, {immediate: true})
 
 function play_Sound () {
@@ -238,5 +240,6 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
 
