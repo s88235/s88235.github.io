@@ -1,8 +1,12 @@
+import Timer from './timer.js';
+
 var isPlaying = 0;
 var isListening = 1;
-var firstBeatNormal = 0;
+var firstBeat = 1;
 var isVisibleSprachbefehle = 0;
 var schlägeZähler = 4;
+var zähler = 0;
+var bpm = 10;
 
 const label_bpm_div = document.getElementById("label-bpm");
 let number_bpm_span = document.getElementById("number-bpm");
@@ -27,10 +31,13 @@ const overlay_div = document.getElementById("overlay");
 const close_btn_button = document.getElementById("close-btn");
 const popup_sprachbefehle_div = document.getElementById("popup-sprachbefehle");
 
+const soundHigh = new Audio ('sounds/MetronomeSoundHigh.mp3');
+const soundLow = new Audio ('sounds/MetronomeSoundLow.mp3');
+
 //check if annyang could be loaded
 if(annyang) {
     console.log("annyang works")
-}
+}  
 
 //command Liste
 var commands = {
@@ -43,16 +50,39 @@ var commands = {
 }
 
 //functions
+//Timer funktion (funktion, interval, startet mit Funktion statt warten)
+const timer = new Timer(play_Sound, 60000/bpm, {immediate: true})
+
+function play_Sound () {
+    if (firstBeat == 1) {
+        if (zähler == schlägeZähler) {
+            zähler = 0;
+        }
+        if (zähler == 0) {
+            soundHigh.play();
+            soundHigh.currentTime = 0;
+        }
+        else {
+            soundLow.play();
+            soundLow.currentTime = 0;
+        }
+        zähler++;
+    }
+}
+
 function start_playing() {
+    zähler = 0;
     isPlaying = 1;
     changeVisibilityPlayPauseButton();
     console.log("start");
+    timer.start();
 }
 
 function stop_playing() {
     isPlaying = 0;
     changeVisibilityPlayPauseButton();
     console.log("stop");
+    timer.stop();
 }
 
 function get_italian() {
@@ -89,7 +119,7 @@ function get_italian() {
     }
     else if (slider_bpm_input.value >= 200) {
         italian = 'Prestissimo';
-    }
+    } 
     return italian;
 }
 
@@ -115,6 +145,12 @@ function changeVisibilitySprachbefehlePopup() {
 }
 changeVisibilitySprachbefehlePopup();
 
+function setBPM() {
+    bpm = 161;
+    number_bpm_span.innerHTML = bpm;
+    slider_bpm_input.value = bpm;
+    bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
+}
 
 //Sprache auf deutsch schalten
 annyang.setLanguage('de');
@@ -123,7 +159,7 @@ annyang.setLanguage('de');
 annyang.addCommands(commands);
 
 //start listening
-annyang.start();  
+annyang.start();
 
 
 //EventListener
@@ -171,12 +207,12 @@ spracheingabe_input.addEventListener('change', function() {
 
 //soll der erste beat hervorgehoben werden?
 erster_beat_input.addEventListener('change', function () {
-    if (firstBeatNormal == 0) {
-        firstBeatNormal = 1;
+    if (firstBeat == 0) {
+        firstBeat = 1;
         console.log(firstBeatNormal);
     }
     else {
-        firstBeatNormal = 0;
+        firstBeat = 0;
         console.log(firstBeatNormal);
     }
 })
@@ -192,9 +228,9 @@ close_btn_button.addEventListener('click', function(){
 
 //number-bpm an slider anpassen
 number_bpm_span.innerHTML = slider_bpm_input.value;
-slider_bpm_input.oninput = function () {
-    number_bpm_span.innerHTML = this.value;
+slider_bpm_input.addEventListener('input', function () {
+    number_bpm_span.innerHTML = slider_bpm_input.value;
+    bpm = slider_bpm_input.value;
+    timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
-}
-
-function main () {}
+})
