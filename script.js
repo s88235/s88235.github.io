@@ -105,7 +105,7 @@ function leiser() {
 function setBPM(newBPM) {
     Number(newBPM);
     bpm = newBPM;
-    console.log('setBPM: ', bpm);
+    console.log('setBPM:', bpm);
     timer.timeInterval = 60000 / bpm;
     number_bpm_span.innerHTML = bpm;
     slider_bpm_input.value = bpm;
@@ -316,3 +316,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
