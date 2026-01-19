@@ -104,8 +104,9 @@ function leiser() {
 //bpm ändern
 function setBPM(newBPM) {
     bpm = newBPM;
-    number_bpm_span.innerHTML = newBPM;
-    slider_bpm_input.value = newBPM;
+    timer.timeInterval = 60000 / bpm;
+    number_bpm_span.innerHTML = bpm;
+    slider_bpm_input.value = bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
 function schneller() {
