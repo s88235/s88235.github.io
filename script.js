@@ -42,14 +42,12 @@ if(annyang) {
 
 //command Liste
 var commands = {
-    'Start' : start_playing,
+    /* 'Start' : start_playing,
     'los' : start_playing,
     'an' : start_playing,
-    'Metronom an' : start_playing,
     'Stop' : stop_playing,
     'aus' : stop_playing,
     'Pause' : stop_playing,
-    'Metronom aus' : stop_playing,
 
     'lauter' : lauter,
     'Lautstärke hoch' : lauter,
@@ -57,11 +55,30 @@ var commands = {
     'Lautstärke runter' : leiser,
 
     'schneller' : schneller,
-    /* 'Tempo hoch' : schneller, */
+    'Tempo hoch' : schneller,
     'langsamer' : langsamer,
+    'Tempo runter' : langsamer,
+
+    'Tempo *bpm' : setBPM */
+
+    'start' : start_playing,
+    'go' : start_playing,
+    'on' : start_playing,
+    'stop' : stop_playing,
+    'off' : stop_playing,
+    'pause' : stop_playing,
+
+    'louder' : lauter,
+    'volume up' : lauter,
+    'quiet' : leiser,
+    'volume down' : leiser,
+
+    'faster' : schneller,
+    /* 'Tempo hoch' : schneller, */
+    'slower' : langsamer,
     /* 'Tempo runter' : langsamer, */
 
-    'Tempo *bpm' : setBPM
+    'Speed *bpm' : setBPM
 }
 
 //functions
@@ -237,7 +254,7 @@ changeVisibilitySprachbefehlePopup();
 
 
 //Sprache auf deutsch schalten
-annyang.setLanguage('de');
+/* annyang.setLanguage('de'); */
 
 //add commands
 annyang.addCommands(commands);
@@ -319,4 +336,3 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
-
