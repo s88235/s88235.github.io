@@ -103,14 +103,14 @@ function leiser() {
 
 //bpm ändern
 function setBPM(newBPM) {
-    Number(newBPM);
-    bpm = newBPM;
-    console.log('setBPM:', bpm);
+    bpm = Number(newBPM);
+    console.log('setBPM: ', bpm);
     timer.timeInterval = 60000 / bpm;
     number_bpm_span.innerHTML = bpm;
     slider_bpm_input.value = bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
+
 function schneller() {
     console.log('schneller bpm:',bpm + 30);
     if (bpm + 30 > 220) {
@@ -316,4 +316,3 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
-
