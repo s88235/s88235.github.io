@@ -313,6 +313,7 @@ number_bpm_span.innerHTML = slider_bpm_input.value;
 slider_bpm_input.addEventListener('input', function () {
     number_bpm_span.innerHTML = slider_bpm_input.value;
     bpm = slider_bpm_input.value;
+    bpm = Number(bpm);
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
