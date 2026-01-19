@@ -71,11 +71,11 @@ var commands = {
 
     'louder' : lauter,
     'volume up' : lauter,
-    'quieter' : leiser,
+    'quiet' : leiser,
     'volume down' : leiser,
 
     'faster' : schneller,
-    'Speed up' : schneller, 
+    'Speed down' : schneller, 
     'slower' : langsamer,
     'Speed down' : langsamer,
 
@@ -123,12 +123,15 @@ function leiser() {
 
 //bpm ändern
 function setBPM(newBPM) {
-    bpm = Number(newBPM);
-    console.log('setBPM: ', bpm);
-    timer.timeInterval = 60000 / bpm;
-    number_bpm_span.innerHTML = bpm;
-    slider_bpm_input.value = bpm;
-    bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
+    newBPM = Number(newBPM);
+    if (newBPM >= 1 && newBPM <= 220) {
+        bpm = newBPM;
+        console.log('setBPM: ', bpm);
+        timer.timeInterval = 60000 / bpm;
+        number_bpm_span.innerHTML = bpm;
+        slider_bpm_input.value = bpm;
+        bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
+    }
 }
 
 function schneller() {
@@ -337,6 +340,3 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
-
-
-
