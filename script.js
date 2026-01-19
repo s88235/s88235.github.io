@@ -62,10 +62,10 @@ var commands = {
     'Tempo *bpm' : setBPM */
 
     'start' : start_playing,
-    'metronome go' : start_playing,
-    'metronome on' : start_playing,
+    'go' : start_playing,
+    'on' : start_playing,
     'stop' : stop_playing,
-    'metronome off' : stop_playing,
+    'off' : stop_playing,
     'pause' : stop_playing,
 
     'louder' : lauter,
@@ -74,9 +74,9 @@ var commands = {
     'volume down' : leiser,
 
     'faster' : schneller,
-    /* 'Tempo hoch' : schneller, */
+    'Tempo hoch' : schneller, 
     'slower' : langsamer,
-    /* 'Tempo runter' : langsamer, */
+    'Speed down' : langsamer,
 
     'Speed *bpm' : setBPM
 }
@@ -336,4 +336,3 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
-
