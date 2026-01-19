@@ -47,7 +47,7 @@ var commands = {
     'an' : start_playing,
     'Stop' : stop_playing,
     'aus' : stop_playing,
-    'pause' : stop_playing,
+    'Pause' : stop_playing,
 
     'lauter' : lauter,
     'Lautstärke hoch' : lauter,
@@ -305,4 +305,5 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
