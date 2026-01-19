@@ -21,5 +21,9 @@ https://s88235.github.io/
         <td>...</td>
     </tr>
 </table>
+
+<h2>Storyboard</h2>
+<img src="images/Storyboard.png">
+
 <h2>unterstützte Browser</h2>
 <p>Google Chrome, Ecosia, DuckDuckGo</p>
