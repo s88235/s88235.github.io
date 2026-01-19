@@ -45,9 +45,11 @@ var commands = {
     'Start' : start_playing,
     'los' : start_playing,
     'an' : start_playing,
+    'Metronom an' : start_playing,
     'Stop' : stop_playing,
     'aus' : stop_playing,
     'Pause' : stop_playing,
+    'Metronom aus' : stop_playing,
 
     'lauter' : lauter,
     'Lautstärke hoch' : lauter,
@@ -317,3 +319,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
