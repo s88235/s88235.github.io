@@ -62,6 +62,7 @@ var commands = {
     'Tempo *bpm' : setBPM */
 
     'start' : start_playing,
+    'play' : start_playing,
     'go' : start_playing,
     'on' : start_playing,
     'stop' : stop_playing,
@@ -336,3 +337,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
