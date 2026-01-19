@@ -1,6 +1,4 @@
 <img src="images/logo.png" height= 50px>
-<p>eine multimodale Metronom Anwendung</p>
-
 https://s88235.github.io/ <br><br>
 
 <p>MultiTakt ist ein digitales Metronom für Musiker:innen. Neben klassischen händischen Eingaben können Nutzer:innen von MultiTakt das Metronom ebenfalls mithilfe von Sprachbefehlen steuern.</p>
