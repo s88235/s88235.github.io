@@ -110,6 +110,7 @@ function setBPM(newBPM) {
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 }
 function schneller() {
+    console.log(bpm + 30);
     if (bpm + 30 > 220) {
         bpm = 220;
         setBPM(bpm);
@@ -313,3 +314,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
