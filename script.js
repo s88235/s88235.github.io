@@ -103,6 +103,7 @@ function leiser() {
 
 //bpm ändern
 function setBPM(newBPM) {
+    Number(newBPM);
     bpm = newBPM;
     console.log('setBPM: ', bpm);
     timer.timeInterval = 60000 / bpm;
