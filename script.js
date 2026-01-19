@@ -7,6 +7,7 @@ var isVisibleSprachbefehle = 0;
 var schlägeZähler = 4;
 var zähler = 0;
 var bpm = 10;
+var lautstärke = 0.5;
 
 const label_bpm_div = document.getElementById("label-bpm");
 let number_bpm_span = document.getElementById("number-bpm");
@@ -46,16 +47,85 @@ var commands = {
     'an' : start_playing,
     'stop' : stop_playing,
     'aus' : stop_playing,
-    'pause' : stop_playing
+    'pause' : stop_playing,
+
+    'lauter' : lauter,
+    'Lautstärke hoch' : lauter,
+    'leiser' : leiser,
+    'Lautstärke runter' : leiser
 }
 
 //functions
-//Timer funktion (funktion, interval, startet mit Funktion statt warten)
-soundHigh.volume = 0.5;
-soundLow.volume = 0.5;
-const timer = new Timer(play_Sound, 60000/bpm, {immediate: true})
 
-function play_Sound () {
+//Lautstärke
+function set_volume (newVolume) {
+    if (newVolume > 1 && newVolume <= 100) {
+        newVolume = newVolume / 100;
+    }
+    if (newVolume >= 0 && newVolume <= 1) {
+        lautstärke = newVolume;
+        soundHigh.volume = lautstärke;
+        soundLow.volume = lautstärke;
+    }
+    else {
+        console.log('invalid volume')
+    }
+}
+set_volume(lautstärke);
+
+function lauter() {
+    if (lautstärke + 0.2 > 1) {
+        lautstärke = 1;
+        set_volume(lautstärke);
+    }
+    else {
+        lautstärke = lautstärke + 0.2;
+        set_volume(lautstärke);
+    }
+}
+function leiser() {
+    if (lautstärke - 0.2 < 0) {
+        lautstärke = 0;
+        set_volume(lautstärke);
+    }
+    else {
+        lautstärke = lautstärke - 0.2;
+        set_volume(lautstärke);
+    }
+}
+
+//bpm ändern
+function setBPM(newBPM) {
+    bpm = newBPM;
+    number_bpm_span.innerHTML = newBPM;
+    slider_bpm_input.value = newBPM;
+    bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
+}
+function schneller() {
+    if (bpm + 30 > 220) {
+        bpm = 220;
+        setBPM(bpm);
+    }
+    else {
+        bpm = bpm + 30;
+        setBPM(bpm);
+    }
+}
+function langsamer() {
+    if (bpm - 30 < 1) {
+        bpm = 1;
+        setBPM(bpm);
+    }
+    else {
+        bpm = bpm - 30;
+        setBPM(bpm);
+    }
+}
+
+//Timer funktion (funktion, interval, startet mit Funktion statt warten
+const timer = new Timer(play_sound, 60000/bpm, {immediate: true})
+
+function play_sound () {
     if (firstBeat == 1) {
         if (zähler == schlägeZähler) {
             zähler = 0;
@@ -151,12 +221,7 @@ function changeVisibilitySprachbefehlePopup() {
 }
 changeVisibilitySprachbefehlePopup();
 
-function setBPM() {
-    bpm = 161;
-    number_bpm_span.innerHTML = bpm;
-    slider_bpm_input.value = bpm;
-    bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
-}
+
 
 //Sprache auf deutsch schalten
 annyang.setLanguage('de');
@@ -165,7 +230,7 @@ annyang.setLanguage('de');
 annyang.addCommands(commands);
 
 //start listening
-annyang.start();
+annyang.start();  
 
 
 //EventListener
@@ -240,7 +305,3 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
-
-
-
-
