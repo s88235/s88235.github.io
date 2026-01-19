@@ -75,7 +75,7 @@ var commands = {
     'volume down' : leiser,
 
     'faster' : schneller,
-    'Tempo hoch' : schneller, 
+    'Speed up' : schneller, 
     'slower' : langsamer,
     'Speed down' : langsamer,
 
@@ -337,5 +337,6 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
 
