@@ -1,5 +1,5 @@
 <img src="images/logo.png" height= 50px>
-<h1>MultiTakt - eine multimodale Metronom Anwendung</h1>
+<p>eine multimodale Metronom Anwendung</p>
 
 https://s88235.github.io/ <br><br>
 
