@@ -25,9 +25,12 @@ footer {
     background: #12121c;
     margin-top: 20px;
     height: 150px;
+    width: 100%;
     text-align: center;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
+    /* position: absolute;
+    bottom: 0%; */
 }
 
 #logo-img {
@@ -109,6 +112,7 @@ h2 {
     transition: background .7s ease-in-out;
 }
 
+
 .schläger-zähler-interface {
     display: flex;
     justify-content: center;
@@ -150,7 +154,7 @@ h2 {
 
 .Einstellungen {
     transition: opacity .15s ease-in-out;
-    width: 240px;
+    width: 180px;
     margin: 0 auto;
     text-align: left;
     padding-top: 20px;
@@ -166,7 +170,6 @@ h2 {
     bottom: 20px;
 }
 #spracheingabe {
-    
     display: flex;
     justify-content: left;
     align-items: left;
@@ -212,8 +215,6 @@ input[type="checkbox"] {
     width:100%;
     height:100%;
     background: rgba(0, 0, 0, 0.5);
-    /*opacity:0;
-    transition: opacity 1s ease-in-out 2s;*/
 }
 .popup .popup-content {
     position: absolute;
@@ -225,9 +226,7 @@ input[type="checkbox"] {
     background:#F7F4E9;
     padding: 25px;
     border-radius: 20px;
-    /*opacity:0;*/
     box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.5);
-    /*transition:all 0.5s ease-in-out;*/
 }
 .popup .popup-content h2 {
     font-size: 30px;
@@ -245,6 +244,4 @@ input[type="checkbox"] {
     bottom: 80%;
     background-color: #e40c2c45;
 }
-
-
 
