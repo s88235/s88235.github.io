@@ -42,10 +42,10 @@ if(annyang) {
 
 //command Liste
 var commands = {
-    'start' : start_playing,
+    'Start' : start_playing,
     'los' : start_playing,
     'an' : start_playing,
-    'stop' : stop_playing,
+    'Stop' : stop_playing,
     'aus' : stop_playing,
     'pause' : stop_playing,
 
@@ -305,3 +305,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
