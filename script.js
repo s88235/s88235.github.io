@@ -40,6 +40,12 @@ if(annyang) {
     console.log("annyang works")
 }  
 
+//Annyang result console log idk
+annyang.addCallback('result', function(phrases) {
+  console.log("I think the user said: ", phrases[0]);
+  console.log("But then again, it could be any of the following: ", phrases);
+});
+
 //command Liste
 var commands = {
     /* 'Start' : start_playing,
@@ -340,3 +346,4 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
