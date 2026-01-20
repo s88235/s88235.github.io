@@ -29,8 +29,9 @@ footer {
     text-align: center;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
-    /* position: absolute;
-    bottom: 0%; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 #logo-img {
@@ -244,4 +245,5 @@ input[type="checkbox"] {
     bottom: 85%;
     background-color: #e40c2c45;
 }
+
 
