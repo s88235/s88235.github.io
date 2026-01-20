@@ -68,12 +68,20 @@ var commands = {
     'Tempo *bpm' : setBPM */
 
     'start' : start_playing,
+    'metronome start' : start_playing,
     'play' : start_playing,
+    'metronome play' : start_playing,
     'go' : start_playing,
+    'metronome go' : start_playing,
     'on' : start_playing,
+    'metronome on' : start_playing,
+
     'stop' : stop_playing,
+    'metronome stop' : stop_playing,
     'off' : stop_playing,
+    'metronome off' : stop_playing,
     'pause' : stop_playing,
+    'metronome pause' : stop_playing,
 
     'louder' : lauter,
     'volume up' : lauter,
@@ -85,7 +93,8 @@ var commands = {
     'slower' : langsamer,
     'Speed down' : langsamer,
 
-    'Speed *bpm' : setBPM
+    'Speed *bpm' : setBPM,
+    '*bpm' : setBPM
 }
 
 //functions
@@ -110,20 +119,24 @@ function lauter() {
     if (lautstärke + 0.2 > 1) {
         lautstärke = 1;
         set_volume(lautstärke);
+        console.log('max volume')
     }
     else {
         lautstärke = lautstärke + 0.2;
         set_volume(lautstärke);
+        console.log('volume up')
     }
 }
 function leiser() {
     if (lautstärke - 0.2 < 0) {
         lautstärke = 0;
         set_volume(lautstärke);
+        console.log('min volume')
     }
     else {
         lautstärke = lautstärke - 0.2;
         set_volume(lautstärke);
+        console.log('volume down')
     }
 }
 
@@ -346,4 +359,5 @@ slider_bpm_input.addEventListener('input', function () {
     timer.timeInterval = 60000 / bpm;
     bezeichnung_bpm_italienisch_div.innerHTML = get_italian();
 })
+
 
