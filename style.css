@@ -24,7 +24,7 @@ body {
 footer {
     background: #12121c;
     margin-top: 20px;
-    height: 150px;
+    height: 100px; /*former: 150px*/
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -245,5 +245,6 @@ input[type="checkbox"] {
     bottom: 85%;
     background-color: #e40c2c45;
 }
+
 
 
